@@ -1,0 +1,30 @@
+{
+  "files": {
+    "main.css": "/Portfolio_carlossd/static/css/main.a236c4ba.css",
+    "main.js": "/Portfolio_carlossd/static/js/main.20f2ab61.js",
+    "static/js/488.9561f9b8.chunk.js": "/Portfolio_carlossd/static/js/488.9561f9b8.chunk.js",
+    "static/media/Fondo.png": "/Portfolio_carlossd/static/media/Fondo.c85643f436a9f9707971.png",
+    "static/media/Mulsurv.png": "/Portfolio_carlossd/static/media/Mulsurv.9fd6df0f3839b2d922f3.png",
+    "static/media/futbol2.jpg": "/Portfolio_carlossd/static/media/futbol2.8eeb4a3f9e0b839bd298.jpg",
+    "static/media/FotoMoodle.jpg": "/Portfolio_carlossd/static/media/FotoMoodle.ff58401a9afad6eb67c7.jpg",
+    "static/media/futbol1.jpg": "/Portfolio_carlossd/static/media/futbol1.4e393c57c62f2f0ec803.jpg",
+    "static/media/DigitalBuilders.jpg": "/Portfolio_carlossd/static/media/DigitalBuilders.9fef7ed8f10006981d6d.jpg",
+    "static/media/sunvolt.png": "/Portfolio_carlossd/static/media/sunvolt.65ae82081ef79c4645da.png",
+    "static/media/react.jpg": "/Portfolio_carlossd/static/media/react.1f75c4bdaa54eb3890a3.jpg",
+    "static/media/LogoCambridge.jpg": "/Portfolio_carlossd/static/media/LogoCambridge.aa3a46695227dccc910f.jpg",
+    "static/media/pythonlogo.jpg": "/Portfolio_carlossd/static/media/pythonlogo.cb84898928a944a814aa.jpg",
+    "static/media/angularlogo.jpg": "/Portfolio_carlossd/static/media/angularlogo.8986dd1b568330d2eb0f.jpg",
+    "static/media/weblogo.jpg": "/Portfolio_carlossd/static/media/weblogo.6d56244e692531a01a00.jpg",
+    "static/media/osint.jpg": "/Portfolio_carlossd/static/media/osint.eff0b4c4cc0d1ee4c3c8.jpg",
+    "static/media/LogoUclm.jpg": "/Portfolio_carlossd/static/media/LogoUclm.81a7276f8b9310663887.jpg",
+    "static/media/java.jpg": "/Portfolio_carlossd/static/media/java.76b41fb32f68d2dfa5cf.jpg",
+    "index.html": "/Portfolio_carlossd/index.html",
+    "main.a236c4ba.css.map": "/Portfolio_carlossd/static/css/main.a236c4ba.css.map",
+    "main.20f2ab61.js.map": "/Portfolio_carlossd/static/js/main.20f2ab61.js.map",
+    "488.9561f9b8.chunk.js.map": "/Portfolio_carlossd/static/js/488.9561f9b8.chunk.js.map"
+  },
+  "entrypoints": [
+    "static/css/main.a236c4ba.css",
+    "static/js/main.20f2ab61.js"
+  ]
+}
