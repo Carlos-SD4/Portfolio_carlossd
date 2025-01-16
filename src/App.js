@@ -384,7 +384,7 @@ function App() {
 
 function AppWrapper() {
   return (
-    <Router>
+    <Router basename="/Portfolio_carlossd">
       <App />
     </Router>
   );
