@@ -1,0 +1,889 @@
+/* General */
+html, body {
+  scroll-behavior: smooth;
+  margin: 0;
+  padding: 0;
+  font-family: 'Arial', sans-serif;
+  color: #112d61;
+  background-image: url('./Fondo.png');
+  background-size: cover;
+  background-attachment: fixed;
+  position: relative;
+  box-sizing: border-box;
+  width: 100%;
+  height: 100%;  /* Asegura que la altura también esté correctamente definida */
+}
+
+body::after {
+  content: "";
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  background: radial-gradient(circle, rgba(255, 255, 255, 0.1) 1%, transparent 50%);
+  background-size: 2px 2px;
+  z-index: -1;
+  opacity: 0.5;
+}
+
+/* App Container */
+.App {
+  margin-top: 80px;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  min-height: 100vh;
+  text-align: center;
+  color: #ffffff;
+  z-index: 1;
+  position: relative;
+  width: 100%;
+  overflow-x: hidden;  /* Evita el scroll horizontal */
+
+}
+
+
+/* Header */
+.App-header {
+  margin-bottom: 40px;
+  background-size: cover;
+  width: 100%;
+  height: 350px;
+}
+
+.profile-card h1 {
+  font-size: 4em; /* Tamaño grande para el nombre */
+  font-weight: bold;
+  color: #ffffff;
+  margin-bottom: 10px;
+  text-shadow: 2px 2px 4px rgba(0, 0, 0, 0.7); /* Sombra para hacer el texto más legible */
+  text-transform: uppercase; /* Convierte el nombre a mayúsculas */
+}
+
+
+
+/* Card */
+.card {
+  width: 150px;
+  height: 150px;
+  margin: 20px auto;
+  border-radius: 50%;
+  overflow: hidden;
+  border: 3px solid #f1c40f;
+}
+
+.profile-image-in-card {
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+}
+
+/* Estudios Section */
+.estudios-section {
+  margin: 40px auto;
+  padding: 20px;
+  background: rgba(255, 255, 255, 0.1);
+  border-radius: 8px;
+  box-shadow: 0 4px 6px rgba(0, 0, 0, 0.3);
+  width: 90%;
+}
+
+.estudios-section h2 {
+  font-size: 2em;
+  color: #f1c40f;
+}
+
+.estudios-list {
+  margin-top: 20px;
+}
+
+.estudio-item {
+  margin-bottom: 20px;
+  padding: 15px;
+  border-left: 4px solid #f1c40f;
+  background: rgba(255, 255, 255, 0.2);
+  border-radius: 8px;
+  color: #ecf0f1;
+}
+
+.estudio-item h3 {
+  font-size: 1.2em;
+  color: #f1c40f;
+  margin-bottom: 5px;
+}
+
+.estudio-item p {
+  margin: 5px 0;
+  color: #ecf0f1;
+}
+
+/* Proyectos Section */
+.proyectos-section {
+  margin: 40px auto;
+  padding: 20px;
+  background: rgba(255, 255, 255, 0.1);
+  border-radius: 8px;
+  box-shadow: 0 4px 6px rgba(0, 0, 0, 0.3);
+  width: 90%;
+}
+
+.proyectos-section h2 {
+  font-size: 1.5em;
+  color: #f1c40f;
+  margin-bottom: 20px;
+}
+
+.proyectos-section p {
+  font-size: 1em;
+  color: #ecf0f1;
+}
+
+
+
+/* Social Icons */
+.social-icons {
+  position: fixed;
+  right: 20px;
+  bottom: 20px;
+  display: flex;
+  flex-direction: column;
+  gap: 15px;
+}
+
+.social-icons a {
+  color: #f1c40f;
+  transition: transform 0.3s ease, color 0.3s ease;
+}
+
+.social-icons a:hover {
+  color: #e67e22;
+  transform: scale(1.2);
+}
+
+/* Media Queries for Responsiveness */
+
+/* Small devices (phones, less than 600px) */
+@media (max-width: 600px) {
+  .App-header h1 {
+    font-size: 1.5em;
+  }
+
+  .App-header p {
+    font-size: 1em;
+    padding: 0 10px;
+  }
+
+  .card {
+    width: 120px;
+    height: 120px;
+  }
+
+  .estudios-section,
+  .proyectos-section {
+    padding: 15px;
+    margin: 20px auto;
+  }
+
+  .estudio-item {
+    padding: 10px;
+  }
+
+  .social-icons {
+    flex-direction: row;
+    bottom: 10px;
+    right: 10px;
+    gap: 10px;
+  }
+}
+
+/* Medium devices (tablets, 600px to 1024px) */
+@media (min-width: 600px) and (max-width: 1024px) {
+  .App-header h1 {
+    font-size: 1.9em;
+  }
+
+  .App-header p {
+    font-size: 1em;
+  }
+
+  .card {
+    width: 140px;
+    height: 140px;
+  }
+
+  .estudios-section,
+  .proyectos-section{
+    max-width: 90%;
+  }
+
+  .social-icons {
+    bottom: 15px;
+    right: 15px;
+  }
+}
+
+
+/* Proyectos Section */
+.proyectos-section {
+  margin: 40px auto;
+  padding: 20px;
+  background: rgba(255, 255, 255, 0.1);
+  border-radius: 8px;
+  box-shadow: 0 4px 6px rgba(0, 0, 0, 0.3);
+  width: 90%;
+}
+
+.proyectos-section h2 {
+  font-size: 1.5em;
+  color: #f1c40f;
+  margin-bottom: 20px;
+}
+
+.proyectos-section p {
+  font-size: 1em;
+  color: #ecf0f1;
+  margin-bottom: 20px;
+}
+
+/* Lista de proyectos */
+.proyectos-list {
+  margin-top: 20px;
+}
+
+/* Cada proyecto */
+.proyecto-item {
+  margin-bottom: 25px;
+  padding: 20px;
+  background: rgba(255, 255, 255, 0.15);
+  border-radius: 8px;
+  border-left: 4px solid #f1c40f;
+  color: #ecf0f1;
+  box-shadow: 0 4px 6px rgba(0, 0, 0, 0.2);
+}
+
+.proyecto-item h3 {
+  font-size: 1.2em;
+  color: #f1c40f;
+  margin-bottom: 10px;
+}
+
+.proyecto-item p {
+  margin: 5px 0;
+}
+
+.proyecto-item strong {
+  color: #f1c40f;
+}
+
+
+/* Logros Section */
+.logros-section {
+  margin: 40px auto;
+  padding: 20px;
+  background: rgba(255, 255, 255, 0.1);
+  border-radius: 8px;
+  box-shadow: 0 4px 6px rgba(0, 0, 0, 0.3);
+  width: 90%;
+}
+
+.logros-section h2 {
+  font-size: 1.5em;
+  color: #f1c40f;
+  margin-bottom: 20px;
+}
+
+.logros-section p {
+  font-size: 1em;
+  color: #ecf0f1;
+  margin-bottom: 20px;
+}
+
+/* Lista de logros */
+.logros-list {
+  margin-top: 20px;
+}
+
+/* Cada logro */
+.logro-item {
+  margin-bottom: 25px;
+  padding: 20px;
+  background: rgba(255, 255, 255, 0.15);
+  border-radius: 8px;
+  border-left: 4px solid #f1c40f;
+  color: #ecf0f1;
+  box-shadow: 0 4px 6px rgba(0, 0, 0, 0.2);
+}
+
+.logro-item h3 {
+  font-size: 1.2em;
+  color: #f1c40f;
+  margin-bottom: 10px;
+}
+
+.logro-item p {
+  margin: 5px 0;
+}
+
+.logro-item strong {
+  color: #f1c40f;
+}
+
+.back-link {
+  color: #f1c40f; /* Blanco */
+  background-color: #11527d; /* Color de fondo verde */
+  padding: 10px 20px;
+  border-radius: 5px;
+  text-decoration: none;
+  font-size: 18px;
+  font-weight: bold;
+  transition: background-color 0.3s ease;
+}
+
+.about-link {
+  color: #f1c40f; /* Blanco */
+  background-color: #11527d; /* Color de fondo azul */
+  padding: 10px 20px; /* Relleno para hacerlo más grande */
+  border-radius: 5px; /* Bordes redondeados */
+  text-decoration: none; /* Eliminar subrayado */
+  font-size: 18px; /* Tamaño de la fuente */
+  font-weight: bold; /* Negrita */
+  transition: background-color 0.3s ease; /* Transición suave al pasar el ratón */
+  display: inline-block; /* Asegura que el enlace sea un bloque, lo que permite aplicar margen */
+  width: fit-content; /* Ajusta el ancho al contenido */
+  align-items: center;
+  position: relative;
+  top: 10px;
+}
+
+.about-link:hover {
+  background-color: #2980b9; /* Cambiar el fondo cuando el ratón pasa por encima */
+}
+
+.about-link:focus {
+  outline: none; /* Quitar el borde del enfoque */
+}
+
+.about-link:active {
+  background-color: #1f7bbf; /* Fondo más oscuro cuando se hace clic */
+}
+
+.back-link:hover {
+  background-color: #11527d; /* Cambio de color al pasar el ratón */
+}
+
+.back-link:focus {
+  outline: none;
+}
+
+.back-link:active {
+  background-color: #1f7bbf; /* Fondo más oscuro al hacer clic */
+}
+
+/* Sobre Mi */
+.sobre-mi {
+  margin: 40px auto;
+  padding: 20px;
+  background: rgba(255, 255, 255, 0.1); /* Fondo translúcido */
+  border-radius: 8px;
+  box-shadow: 0 4px 6px rgba(0, 0, 0, 0.3); /* Sombra oscura */
+  width: 90%;
+}
+
+.sobre-mi h1 {
+  font-size: 2.5em;
+  font-weight: bold;
+  color: #f1c40f;
+  margin-bottom: 20px;
+  text-align: center;
+  text-shadow: 2px 2px 4px rgba(0, 0, 0, 0.5);
+}
+
+.sobre-mi p {
+  font-size: 1.2em;
+  line-height: 1.6;
+  color: #ecf0f1;
+  text-shadow: 1px 1px 2px rgba(0, 0, 0, 0.5);
+  margin: 0 auto 20px auto;
+  max-width: 800px;
+}
+
+.sobre-mi section {
+  margin-bottom: 30px;
+}
+
+.sobre-mi h2 {
+  font-size: 1.5em;
+  color: #f1c40f;
+  margin-bottom: 15px;
+}
+
+.sobre-mi ul {
+  list-style-type: disc;
+  margin-left: 20px;
+}
+
+.sobre-mi li {
+  font-size: 1.1em;
+  margin-bottom: 10px;
+  color: #ecf0f1;
+}
+
+/* Estilo para los botones de volver */
+.sobre-mi .back-link {
+  color: #f1c40f;
+  background-color: #11527d;
+  padding: 10px 20px;
+  border-radius: 5px;
+  text-decoration: none;
+  font-size: 18px;
+  font-weight: bold;
+  transition: background-color 0.3s ease;
+  display: inline-block;
+  margin-top: 30px;
+}
+
+.sobre-mi .back-link:hover {
+  background-color: #2980b9;
+}
+
+.sobre-mi .back-link:focus {
+  outline: none;
+}
+
+.sobre-mi .back-link:active {
+  background-color: #1f7bbf;
+}
+
+/* Responsividad */
+@media (max-width: 600px) {
+  .sobre-mi h1 {
+    font-size: 2em;
+  }
+
+  .sobre-mi p {
+    font-size: 1.1em;
+    padding: 0 10px;
+  }
+
+  .sobre-mi .back-link {
+    font-size: 16px;
+    padding: 8px 15px;
+  }
+
+  .sobre-mi section {
+    padding: 15px;
+  }
+}
+
+@media (min-width: 600px) and (max-width: 1024px) {
+  .sobre-mi h1 {
+    font-size: 2.3em;
+  }
+
+  .sobre-mi p {
+    font-size: 1.15em;
+  }
+
+  .sobre-mi .back-link {
+    font-size: 17px;
+  }
+}
+.deportes .imagenes-futbol,
+.deportes .imagenes-padel,
+.deportes .imagenes-viajes {
+  display: flex;
+  gap: 20px;
+  flex-wrap: wrap;
+  justify-content: center;
+}
+
+.deportes img {
+  width: 100%;
+  max-width: 300px;
+  height: auto;
+  border-radius: 8px;
+  box-shadow: 0 4px 6px rgba(0, 0, 0, 0.2);
+}
+
+@media (max-width: 600px) {
+  .deportes img {
+    max-width: 250px;
+  }
+}
+
+@media (min-width: 600px) and (max-width: 1024px) {
+  .deportes img {
+    max-width: 270px;
+  }
+}
+
+.button {
+  position: relative;
+  display: inline-flex;  /* Asegura que el contenido se ajuste al tamaño del botón */
+  align-items: center;  /* Centra verticalmente el contenido */
+  justify-content: center;  /* Centra horizontalmente el contenido */
+  height: 3rem;  /* Mantén la altura consistente */
+  padding: 0 2rem;  /* Ajusta el relleno horizontal */
+  border-radius: 1.5rem;
+  background: #031e5d;
+  background-size: 400%;
+  color: #f1c40f;
+  border: none;
+  cursor: pointer;
+  text-decoration: none;
+  font-weight: bold;
+}
+
+.button:hover::before {
+  transform: scaleX(1);
+}
+
+.button-content {
+  position: relative;
+  z-index: 1;
+}
+
+.button::before {
+  content: "";
+  position: absolute;
+  top: 0;
+  left: 0;
+  transform: scaleX(0);
+  transform-origin: 0 50%;
+  width: 100%;
+  height: inherit;
+  border-radius: inherit;
+  background: linear-gradient(
+    82.3deg,
+    rgba(150, 93, 233, 1) 10.8%,
+    rgba(99, 88, 238, 1) 94.3%
+  );
+  transition: all 0.475s;
+}
+
+
+.cardphoto {
+  --background: linear-gradient(to right, #74ebd5 0%, #acb6e5 100%);
+  width: 160px;  /* Reducir el tamaño de la tarjeta */
+  height: 210px;
+  padding: 5px;
+  border-radius: 1rem;
+  overflow: visible;
+  background: #74ebd5;
+  background: var(--background);
+  position: relative;
+  display: flex; /* Usamos flexbox para centrar la imagen */
+  justify-content: center; /* Centra horizontalmente */
+  align-items: center; /* Centra verticalmente */
+  margin: 0 auto; /* Centra la tarjeta en su contenedor */
+}
+
+.cardphoto::before,
+.cardphoto::after {
+  content: "";
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  border-radius: 1rem;
+  z-index: -1;
+}
+
+.cardphoto::before {
+  background: linear-gradient(to bottom right, #f6d365 0%, #fda085 100%);
+  transform: rotate(2deg);
+}
+
+.cardphoto::after {
+  background: linear-gradient(to top right, #84fab0 0%, #8fd3f4 100%);
+  transform: rotate(-2deg);
+}
+
+.cardphoto-info {
+  --color: #292b2c;
+  background: var(--color);
+  color: var(--color);
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  width: 100%;
+  height: 100%;
+  overflow: visible;
+  border-radius: 0.7rem;
+  position: relative;
+  z-index: 2;
+}
+
+.cardphoto .title {
+  font-weight: bold;
+  letter-spacing: 0.1em;
+}
+
+.cardphoto:hover::before,
+.cardphoto:hover::after {
+  opacity: 0;
+}
+
+.cardphoto:hover .card-info {
+  color: #74ebd5;
+  transition: color 1s;
+}
+
+/* Estilo para la imagen en la tarjeta */
+.cardphoto img {
+  width: 100%;  /* La imagen ocupa todo el ancho de la tarjeta */
+  height: 100%; /* La imagen ocupa todo el alto de la tarjeta */
+  object-fit: cover; /* Asegura que la imagen cubra el área sin distorsionarse */
+  border-radius: 1rem; /* Bordes redondeados en la imagen */
+}
+
+/* Responsive design: para pantallas pequeñas */
+@media (max-width: 768px) {
+  .cardphoto {
+    width: 150px;  /* Reduce el tamaño de la tarjeta en pantallas pequeñas */
+    height: 200px; /* Reduce el tamaño de la tarjeta en pantallas pequeñas */
+    margin: 1em auto;  /* Centra la tarjeta y da espacio superior/inferior */
+  }
+}
+
+/* Responsive design: para pantallas muy pequeñas (como móviles) */
+@media (max-width: 480px) {
+  .cardphoto {
+    width: 120px; /* Aumenta la reducción del tamaño para pantallas muy pequeñas */
+    height: 160px; /* Reduce más la altura para pantallas pequeñas */
+    margin: 1em auto; /* Elimina el margen izquierdo y centra la tarjeta */
+  }
+
+  /* En caso de que también quieras reducir el tamaño de la fuente de los títulos */
+  .cardphoto .title {
+    font-size: 0.8em; /* Reduce el tamaño de la fuente del título */
+  }
+}
+
+.habilidades-section {
+  margin: 40px auto;
+  padding: 20px;
+  background: rgba(255, 255, 255, 0.1); /* Fondo translúcido */
+  border-radius: 8px;
+  box-shadow: 0 4px 6px rgba(0, 0, 0, 0.3); /* Sombra oscura */
+  width: 90%;
+}
+
+.habilidades-section h2 {
+  font-size: 2em;
+  color: #f1c40f; /* Amarillo para el título */
+  text-shadow: 1px 1px 2px rgba(0, 0, 0, 0.5); /* Sombra para mejor contraste */
+}
+
+.habilidades-section p {
+  font-size: 1.2em;
+  color: #ecf0f1; /* Blanco para el texto */
+  margin-bottom: 20px;
+}
+
+.habilidades-grid {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
+  gap: 20px;
+  justify-content: center;
+  align-items: stretch;
+  margin-top: 20px;
+}
+
+.habilidad {
+  background: rgba(255, 255, 255, 0.2); /* Fondo translúcido */
+  border-radius: 8px;
+  padding: 20px;
+  box-shadow: 0 4px 6px rgba(0, 0, 0, 0.3); /* Sombra para destacar */
+  text-align: center;
+  transition: transform 0.3s ease, box-shadow 0.3s ease;
+}
+
+.habilidad:hover {
+  transform: translateY(-5px);
+  box-shadow: 0 6px 10px rgba(0, 0, 0, 0.4); /* Sombra más intensa al pasar el ratón */
+}
+
+.habilidad i {
+  font-size: 3rem;
+  color: #f1c40f; /* Amarillo para los iconos */
+  margin-bottom: 10px;
+}
+
+.habilidad h3 {
+  font-size: 1.5em;
+  color: #ecf0f1; /* Blanco para subtítulos */
+  margin-bottom: 10px;
+}
+
+.habilidad p {
+  font-size: 1em;
+  color: #bdc3c7; /* Gris claro para descripciones */
+}
+
+
+/* Estilo del contenedor del botón */
+.go-top-container {
+  position: fixed;
+  bottom: 20px;
+  left: 20px; /* Puedes ajustar la posición como prefieras */
+  z-index: 1000;
+}
+
+.go-top {
+  width: 45px;
+  height: 50px;
+  border-radius: 50%;
+  background-color: rgb(20, 20, 20); /* Fondo oscuro */
+  border: none;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  box-shadow: 0px 0px 0px 4px rgba(180, 160, 255, 0.253); /* Sombra */
+  cursor: pointer;
+  transition-duration: 0.3s;
+  overflow: hidden;
+  position: relative;
+}
+
+.go-top button {
+  background-color: rgb(20, 20, 20); /* Fondo oscuro */
+  color: #fff; /* Texto blanco */
+  border: none;
+  border-radius: 50%;
+  padding: 20px;
+  cursor: pointer;
+  transition-duration: 0.3s;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+
+.go-top button svg {
+  fill: white; /* Color del icono */
+  width: 20px;
+  height: 20px;
+  transition-duration: 0.3s;
+  margin-left: 5px;
+  
+}
+
+/* Efecto cuando el mouse pasa por encima del botón */
+.go-top button:hover {
+  width: 100px;
+  background-color: rgb(181, 160, 255); /* Fondo más claro */
+  align-items: center;
+}
+
+/* Animación de la flecha cuando el mouse pasa por encima */
+.go-top button:hover svg {
+  transform: translateY(-200%);
+}
+
+/* Texto que aparece al pasar el mouse sobre el botón */
+.go-top button::before {
+  content: "Subir";
+  position: absolute;
+  bottom: -20px;
+  color: white;
+  font-size: 0px; /* Inicialmente oculto */
+  transition-duration: 0.3s;
+}
+
+.go-top button:hover::before {
+  font-size: 13px;
+  opacity: 1;
+  bottom: unset;
+  transition-duration: 0.3s;
+}
+
+/* Estilo básico para el texto */
+.typing {
+  font-family: 'Courier New', Courier, monospace; /* Fuente de máquina de escribir */
+  font-size: 24px; /* Tamaño del texto */
+  white-space: nowrap; /* Evita el salto de línea */
+  overflow: hidden; /* Esconde lo que aún no se ha escrito */
+  border-right: 2px solid black; /* Cursor de máquina de escribir */
+  width: 0; /* Comienza con el texto oculto */
+  animation: typing 5s steps(16) 1s 1 normal both, blink 0.5s step-end infinite;
+  font-weight: bold;
+}
+
+/* Animación de "escritura" */
+@keyframes typing {
+  from {
+    width: 0; /* Comienza con el texto invisible */
+  }
+  to {
+    width: 100%; /* El texto se muestra completamente */
+  }
+}
+
+/* Animación de parpadeo del cursor */
+@keyframes blink {
+  50% {
+    border-color: transparent; /* Hace que el cursor parpadee */
+  }
+}
+
+/* Navbar General */
+.navbar {
+  position: fixed;
+  top: 0;
+  width: 100%;
+  background-color: rgba(5, 24, 59, 0.7); /* 70% de opacidad */
+  padding: 20px 0;
+  z-index: 1000;
+  display: flex;
+  justify-content: center; /* Centrado de los enlaces */
+  align-items: center;
+  box-sizing: border-box; /* Asegura que los padding no afecten el tamaño total */
+}
+
+/* Lista de enlaces del navbar */
+.navbar-links {
+  display: flex;
+  justify-content: center;
+  list-style-type: none;
+  margin: 0;
+  padding: 0;
+}
+
+/* Estilo de los enlaces */
+.navbar-link {
+  color: #ffffff;
+  margin: 0 60px;
+  text-decoration: none;
+  font-size: 1.4em; /* Tamaño relativo, ajusta con el ancho de la pantalla */
+  text-transform: uppercase;
+  font-family: 'Roboto', sans-serif;
+  
+}
+
+.navbar-link:hover {
+  color: #ddd;
+}
+
+/* Media Query para pantallas pequeñas (ajustamos el tamaño de fuente) */
+@media screen and (max-width: 768px) {
+  /* En móviles, los enlaces de navegación se mantienen visibles */
+  .navbar-links {
+    display: flex; /* No ocultamos los enlaces */
+    flex-direction: row; /* Aseguramos que estén en fila */
+    justify-content: center; /* Centrado horizontal */
+    width: 100%;
+  }
+
+  /* Ajuste de tamaño de fuente para pantallas pequeñas */
+  .navbar-link {
+    font-size: 0.6em; /* Ajusta el tamaño de la fuente para pantallas pequeñas */
+    margin: 0 5px; /* Ajustamos los márgenes para no estar tan juntos */
+  }
+}
+
+
+
+
