@@ -343,19 +343,35 @@ function App() {
 
                 {/* Íconos sociales en la esquina derecha */}
                 <div className="social-icons">
-                  <a href="mailto:carlos.sanchez74@alu.uclm.com" target="_blank" rel="noopener noreferrer">
-                    <FaEnvelope size={30} />
-                  </a>
-                  <a href="https://github.com/Carlos-SD4" target="_blank" rel="noopener noreferrer">
-                    <FaGithub size={30} />
-                  </a>
-                  <a href="https://www.linkedin.com/in/carlos-sánchez-díaz-19328429a" target="_blank" rel="noopener noreferrer">
-                    <FaLinkedin size={30} />
-                  </a>
-                </div>
+  <a
+    href="mailto:carlos.sanchez74@alu.uclm.com"
+    target="_blank"
+    rel="noopener noreferrer"
+    aria-label="Enviar correo a Carlos Sánchez"
+  >
+    <FaEnvelope size={30} />
+  </a>
+  <a
+    href="https://github.com/Carlos-SD4"
+    target="_blank"
+    rel="noopener noreferrer"
+    aria-label="Visitar el perfil de GitHub de Carlos Sánchez"
+  >
+    <FaGithub size={30} />
+  </a>
+  <a
+    href="https://www.linkedin.com/in/carlos-sánchez-díaz-19328429a"
+    target="_blank"
+    rel="noopener noreferrer"
+    aria-label="Visitar el perfil de LinkedIn de Carlos Sánchez"
+  >
+    <FaLinkedin size={30} />
+  </a>
+</div>
+
                 <div className="go-top-container">
   <div className="go-top">
-    <button onClick={() => window.scrollTo(0, 0)}>
+    <button onClick={() => window.scrollTo(0, 0)} aria-label="Ir arriba">
       <svg
         xmlns="http://www.w3.org/2000/svg"
         width="24"
