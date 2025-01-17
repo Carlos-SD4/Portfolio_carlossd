@@ -1,6 +1,6 @@
 {
   "files": {
-    "main.css": "/Portfolio_carlossd/static/css/main.da6832c3.css",
+    "main.css": "/Portfolio_carlossd/static/css/main.d9bc16cb.css",
     "main.js": "/Portfolio_carlossd/static/js/main.5212da54.js",
     "static/js/488.9561f9b8.chunk.js": "/Portfolio_carlossd/static/js/488.9561f9b8.chunk.js",
     "static/media/Fondo.png": "/Portfolio_carlossd/static/media/Fondo.c85643f436a9f9707971.png",
@@ -19,12 +19,12 @@
     "static/media/LogoUclm.jpg": "/Portfolio_carlossd/static/media/LogoUclm.81a7276f8b9310663887.jpg",
     "static/media/java.jpg": "/Portfolio_carlossd/static/media/java.76b41fb32f68d2dfa5cf.jpg",
     "index.html": "/Portfolio_carlossd/index.html",
-    "main.da6832c3.css.map": "/Portfolio_carlossd/static/css/main.da6832c3.css.map",
+    "main.d9bc16cb.css.map": "/Portfolio_carlossd/static/css/main.d9bc16cb.css.map",
     "main.5212da54.js.map": "/Portfolio_carlossd/static/js/main.5212da54.js.map",
     "488.9561f9b8.chunk.js.map": "/Portfolio_carlossd/static/js/488.9561f9b8.chunk.js.map"
   },
   "entrypoints": [
-    "static/css/main.da6832c3.css",
+    "static/css/main.d9bc16cb.css",
     "static/js/main.5212da54.js"
   ]
 }
