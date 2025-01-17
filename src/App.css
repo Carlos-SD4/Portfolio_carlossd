@@ -54,7 +54,7 @@ body::after {
 }
 
 .profile-card h1 {
-  font-size: 3.8em; /* Tamaño grande para el nombre */
+  font-size: 3em; /* Tamaño grande para el nombre */
   font-weight: bold;
   color: #ffffff;
   margin-bottom: 10px;
