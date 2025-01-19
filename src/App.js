@@ -18,14 +18,12 @@ import osint from './osint.jpg';
 import sunvolt from './sunvolt.png';
 import ipokemon from './ipokemon.jpg';
 import mulsurv from './Mulsurv.png';
-import { BrowserRouter as Router, Route, Routes, Link, useLocation } from 'react-router-dom';
-import { useEffect } from 'react';
+import { BrowserRouter as Router, Route, Routes, Link, } from 'react-router-dom';
+
 
 
 
 function App() {
-  // Usamos el hook useLocation para obtener la ruta actual
-  const location = useLocation();
   const estudiosRef = useRef(null);
   const habilidadesRef = useRef(null);
   const logrosRef = useRef(null);
@@ -192,7 +190,6 @@ function App() {
 
                     <div className="logro-item">
                       <h3>Segundo Premio en NTT Digital Builders</h3>
-                      <p><strong>Competencia:</strong> En el concurso NTT Digital Builders, obtuve el segundo premio.</p>
                       <div className="card">
                         <img
                           src={NTT}
@@ -232,6 +229,8 @@ function App() {
                       </div>
                       <p><strong>Descripción:</strong> Una aplicación relacionada con el rendimiento de las placas solares y un dashboard, hecha con Flask. Permite visualizar y analizar datos en tiempo real para optimizar la eficiencia de los paneles solares.</p>
                       <p><strong>Tecnologías:</strong> Flask, JavaScript, HTML, CSS y Python</p>
+                      <p><strong>Link:</strong> <a href="https://github.com/Carlos-SD4/isi-SunVolt">Enlace del Repositorio</a></p>
+
                     </div>
 
                     <div className="proyecto-item">
@@ -246,6 +245,7 @@ function App() {
                       </div>
                       <p><strong>Descripción:</strong> Una aplicación tipo Pokémon hecha desde cero por los alumnos, donde se puede crear un Pokémon, asignar varios ataques y combatir contra otros Pokémon.</p>
                       <p><strong>Tecnologías:</strong> C#, Blend</p>
+                      <p><strong>Link:</strong> <a href="https://github.com/Carlos-SD4/IPokemon">Enlace del Repositorio</a></p>
                     </div>
 
                     <div className="proyecto-item">
@@ -260,6 +260,7 @@ function App() {
                       </div>
                       <p><strong>Descripción:</strong> Un videojuego con modos de un jugador y multijugador. El juego tiene un modo historia interesante y un multijugador tipo Battle Royale donde los jugadores compiten entre sí hasta ser el último en pie.</p>
                       <p><strong>Tecnologías:</strong> Python, Pygame </p>
+                      <p><strong>Link:</strong> <a href="https://github.com/FelipeAlcazar/MulSurv">Enlace del Repositorio</a></p>
                     </div>
 
                     <div className="proyecto-item">
@@ -273,6 +274,7 @@ function App() {
                       </div>
                       <p><strong>Descripción:</strong> Una aplicación OSINT (Open Source Intelligence) que permite conocer tu ubicación y descubrir sitios cercanos de interés, como restaurantes, tiendas y lugares turísticos.</p>
                       <p><strong>Tecnologías:</strong> Python, APIs de Geolocalización</p>
+                      <p><strong>Link:</strong> <a href="https://github.com/Carlos-SD4/OSINT">Enlace del Repositorio</a></p>
                     </div>
                   </div>
                 </section>
